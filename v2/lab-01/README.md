@@ -15,7 +15,7 @@ We have demo application called Wordsmith, that produces sentences from random w
 1. Download [manifest](kube-deployment.yml), Curl friendly link [link](https://raw.githubusercontent.com/akranga/kube-workshop/master/v2/lab-01/kube-deployment.yaml)
 2. Run
 ```
-kubectl apply -f kube-deployment.yaml
+kubectl apply -f kube-deployment.yml
 ```
 3. Run ```kubectl get pods``` and observe the result
 ```
@@ -99,5 +99,5 @@ web-ingress   wordsmith.app.<fqdn-of-your-cluster>                     80       
 6. Clean up after yourself:
 ```
 kubeclt delete -f kube-ingress.yml
-kubectl delete -f kube-deployment.yaml
+kubectl delete -f kube-deployment.yml
 ```
