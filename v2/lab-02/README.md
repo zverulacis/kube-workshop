@@ -71,7 +71,7 @@ registry-creds        kubernetes.io/dockerconfigjson        1         54s
 }
 ```
 
-4. cd to k8s-wordsmith-demo directory and modify ```kube-deployment.yml``` file. Add ```imagePullSecrets``` to the ```specs``` section of each ```Deployment``` in order to use the secret we created in Step 2. Example:
+4. cd to lab-02 directory and modify ```kube-deployment.yml``` file. Add ```imagePullSecrets``` to the ```specs``` section of each ```Deployment``` in order to use the secret we created in Step 2. Example:
 ```yaml
 # ...
 apiVersion: apps/v1beta1
@@ -161,7 +161,7 @@ chmod +x build-and-push.sh
 ```
 
 
-6. cd to k8s-wordsmith-demo directory and modify ```kube-deployment.yml``` file. Make sure that all the ```Deployments``` point to the images we built in the Steps 4,5. Example:
+6. cd to lab-02 directory and modify ```kube-deployment.yml``` file. Make sure that all the ```Deployments``` point to the images we built in the Steps 4,5. Example:
 ```
 ...
 apiVersion: apps/v1beta1
@@ -188,7 +188,7 @@ spec:
 ```
 
 7. Run
-```kubectl apply -f kube-deployment.yaml```
+```kubectl apply -f kube-deployment.yml```
 
 8. Expose the ```web``` application:
 ```kubectl apply -f kube-ingress.yml```
@@ -200,7 +200,7 @@ spec:
 10. Clean up after yourself:
 ```
 kubeclt delete -f kube-ingress.yml
-kubectl delete -f kube-deployment.yaml
+kubectl delete -f kube-deployment.yml
 ```
 
 
